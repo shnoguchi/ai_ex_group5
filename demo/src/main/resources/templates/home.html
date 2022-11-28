@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Progate</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link th:href="@{/css/home.css}" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-left">
+          <input class="back" type="image" onclick="history.back()" th:src="@{/css/fontawesome/arrow-left-solid.svg}">
+        </div>
+        <div class="header-right">
+          <a class="account" th:href="changeMyBest"><span class="fa fa-user"></span> [[${accountName}]]</a>
+        </div>
+      </div>
+    </header>
+    <div class="top-wrapper">
+      <div class="container">
+        <a class="music-info song" href="#">[[${musicName}]]</a>
+        <a class="music-info artist" href="#">[[${musicArtist}]]</a>
+        <div class="youtube">
+          <a th:href="${musicUrl}" target="_blank"><img class="youtube-exa" th:src="${musicImg}"></a>
+        </div>
+        <div class="operation">
+          <a th:href="favList"><span class="fa fa-list fa-4x"></span></a>
+          <a th:href="ifLiked"><span class="fa fa-heart fa-4x"></span></a>
+          <a th:href="topPage"><span class="fa fa-step-forward fa-4x"></span></a>
+        </div>
+      </div>
+    </div>
+    <footer>
+    </footer>
+  </body>
+</html>

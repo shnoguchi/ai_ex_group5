@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Progate</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link th:href="@{/css/login.css}" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+    </header>
+    <div class="top-wrapper">
+      <div class="container">
+        <h1>WHAT IS YOUR FAVORITE?</h1>
+        <form class="login_form" action="/test4" method="post" th:action="@{/canLogin}">
+          <div class="password">
+            <input class="password_box" type="text" name="name" placeholder="ユーザーIDを入力" required> 
+          </div>
+          
+          <div><font color="red">[[${modelValue}]]</font></div>
+          <div class="btn-wrapper">
+          <button class="btn signin">
+  			ログイン
+		  </button>
+		  </div>
+        </form>
+        
+        <div class="btn-wrapper">
+          <button class="btn signup" onclick="location.href='./makeAccount'">
+  			アカウントを作成
+		  </button>
+        </div>
+      </div>
+    </div>
+    <footer>
+    </footer>
+  </body>
+</html>
